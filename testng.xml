@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <parameter name="browser" value="chrome"></parameter>
+    <test verbose="2" preserve-order="true" name="Test All" enabled="false">
+        <classes>
+            <class name="TestDemo">
+                <methods>
+                    <include name="selectTest"></include>
+                    <include name="loginSuccessfulTest">
+                        <parameter name="username" value="tomsmith"></parameter>
+                        <parameter name="password" value="SuperSecretPassword!"></parameter>
+                    </include>
+                    <include name="loginFailedTest">
+                        <parameter name="username" value="tomsmith"></parameter>
+                        <parameter name="password" value="lalalala"></parameter>
+                    </include>
+
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+    <test name="Select" enabled="true">
+        <classes>
+            <class name="TestDemo">
+                <methods>
+                    <include name="selectTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="loginSuccess" enabled="true">
+        <classes>
+            <class name="TestDemo">
+                <methods>
+                    <include name="loginSuccessfulTest">
+                        <parameter name="username" value="tomsmith"></parameter>
+                        <parameter name="password" value="SuperSecretPassword!"></parameter>
+                    </include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="loginFailed" enabled="true">
+        <classes>
+            <class name="TestDemo">
+                <methods>
+                    <include name="loginFailedTest">
+                        <parameter name="username" value="tomsmith"></parameter>
+                        <parameter name="password" value="lalalala"></parameter>
+                    </include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
