@@ -22,7 +22,7 @@
         </classes>
     </test>
 
-    <test name="Select" enabled="true">
+    <test name="select" enabled="false">
         <classes>
             <class name="TestDemo">
                 <methods>
@@ -32,7 +32,7 @@
         </classes>
     </test>
 
-    <test name="loginSuccess" enabled="true">
+    <test name="loginSuccess" enabled="false">
         <classes>
             <class name="TestDemo">
                 <methods>
@@ -45,7 +45,7 @@
         </classes>
     </test>
 
-    <test name="loginFailed" enabled="true">
+    <test name="loginFailed" enabled="false">
         <classes>
             <class name="TestDemo">
                 <methods>
@@ -57,4 +57,37 @@
             </class>
         </classes>
     </test>
+
+    <test name="forgotPassword" enabled="false">
+        <classes>
+            <class name="TestDemo">
+                <methods>
+                    <include name="forgotPasswordTest">
+                        <parameter name="email" value="adina.dumitrescu1@gmail.com"></parameter>
+                    </include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="checkboxes" enabled="false">
+        <classes>
+            <class name="TestDemo">
+                <methods>
+                    <include name="checkboxesTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="inputs" enabled="true">
+        <classes>
+            <class name="TestDemo">
+                <methods>
+                    <include name="inputsTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
 </suite>
